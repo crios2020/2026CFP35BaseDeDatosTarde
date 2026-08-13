@@ -1,0 +1,34 @@
+Base de datos SQL CLIENT - SERVER
+
+    SERVER                              Protocolos              CLIENT
+    Web Server(sitios webs)             ----------              Navegadores 
+    Google.com                          TCP/IP - HTTP           Chrome - Firefox - Edge - Safari - Brave
+    Mercadolibre.com.ar
+
+    Profe (Profesión)                   Castellano              Alumnos (Juan, Lucia, Carolina, Jessus)
+
+    Base de Datos - SGBD 
+    (Sistema Gestor de BD)                  
+    MySQL Community Server              TCP/IP - SQL            MySQL Workbench 
+    MariaDB Server y otros                                      Visual Studio Code
+                                                                DBeaver
+
+
+Paquete XAMPP           (Apachefriends.org)
+        X               Windows Linux IOS
+        A               Apache Web Server
+        M               MySQL Community Server - MariaDB Server
+        P               PHP
+        P               Perl
+
+Paquete WAMP            (Wampserver.com)
+        W               Windows
+        A               Apache Web Server
+        M               MySQL Community Server
+        P               PHP
+
+Paquete LAMP - MAMP - Laragon - AppSrv
+
+
+
+
