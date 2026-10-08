@@ -98,17 +98,32 @@ update articulos set precio=precio*0.95 where precio<200;
 -- 	11- Eliminar los artículos con stock menor a 0.
 delete from articulos where stock<0;
 -- 	12- Agregar a la tabla articulos, los campos stockMinimo y stockMaximo. (usar alter table add)
+describe articulos;
+alter table articulos add stockMinimo int,add stockMaximo int;
+select * from articulos;
 --  13- Completar en los registros los valores de los campos stockMinimo y stockMaximo (usar update)
 --      teniendo en cuenta que el stock mínimo debe ser menor que el stock máximo.
+update articulos set stockMinimo=20, stockMaximo=50;
 --  14- Lista los articulos que se deben reponer y que cantidad se debe reponer de cada articulos.
 --      Tener en cuenta que se debe reponer cuando el stock es menor al stockMinimo y la cantidad de articulos a 
 --      reponer es stockMaximo - stock.
---  15- Calcular el valor de venta de toda la mercaderia que hay en stock.
---  16- Calcular el valor de venta + iva de toda la mercaderia que hay en stock.
+select codigo, nombre, precio, stock, stockMinimo, stockMaximo, 
+    stockMaximo-stock cantidad_a_reponer
+    from articulos
+    where stock<stockMinimo;
+--  15- Calcular el valor de venta de toda la mercaderia que hay
+--      en stock.
+select sum(precio*stock) valor_total_mercaderia from articulos;
+--  16- Calcular el valor de venta + iva de 
+--      toda la mercaderia que hay en stock.
+select round(sum(precio*stock)*1.21,2) valor_total_mercaderia 
+    from articulos;
 
 
-
+use negocio;
 
 -- En vscode usamos la extensión MySQL Database Client database-client.com
+
+-- TODO Funciones de agrupamiento
 
       
